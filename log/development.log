@@ -1,0 +1,1104 @@
+  [1m[35m (369.8ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (260.1ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20190602192915)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190602192915_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190602192915"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCarts (20190602193522)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190602193522_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190602193522"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 19:38:23.279182"], ["updated_at", "2019-06-02 19:38:23.279182"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190602194341)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190602194341_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190602194341"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mProduct Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "products" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (2.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "5"], ["price", "5176.02"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "0"], ["created_at", "2019-06-02 20:29:10.294249"], ["updated_at", "2019-06-02 20:29:10.294249"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2"], ["price", "3745.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "1"], ["created_at", "2019-06-02 20:29:10.300362"], ["updated_at", "2019-06-02 20:29:10.300362"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1"], ["price", "2466.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "2"], ["created_at", "2019-06-02 20:29:10.302152"], ["updated_at", "2019-06-02 20:29:10.302152"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "0"], ["price", "1199.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "3"], ["created_at", "2019-06-02 20:29:10.303602"], ["updated_at", "2019-06-02 20:29:10.303602"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "5"], ["price", "4047.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "4"], ["created_at", "2019-06-02 20:29:10.305089"], ["updated_at", "2019-06-02 20:29:10.305089"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2"], ["price", "4552.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "5"], ["created_at", "2019-06-02 20:29:10.306622"], ["updated_at", "2019-06-02 20:29:10.306622"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "0"], ["price", "8230.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "6"], ["created_at", "2019-06-02 20:29:10.308201"], ["updated_at", "2019-06-02 20:29:10.308201"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "4"], ["price", "7732.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "7"], ["created_at", "2019-06-02 20:29:10.310077"], ["updated_at", "2019-06-02 20:29:10.310077"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "3"], ["price", "2306.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "8"], ["created_at", "2019-06-02 20:29:10.311899"], ["updated_at", "2019-06-02 20:29:10.311899"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "0"], ["price", "7805.02"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "9"], ["created_at", "2019-06-02 20:29:10.313586"], ["updated_at", "2019-06-02 20:29:10.313586"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started GET "/" for ::1 at 2019-06-02 16:30:10 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/" for ::1 at 2019-06-02 16:30:19 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 4.4ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (5046.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (147.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (133.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_test"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (377.2ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_development" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (270.2ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_test" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:33:21.489785"], ["updated_at", "2019-06-02 20:33:21.489785"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:33:21.545118"], ["updated_at", "2019-06-02 20:33:21.545118"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (1.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-02 20:33:21.548935"], ["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "2861.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "0"], ["created_at", "2019-06-02 20:33:21.578538"], ["updated_at", "2019-06-02 20:33:21.578538"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "6787.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "1"], ["created_at", "2019-06-02 20:33:21.581033"], ["updated_at", "2019-06-02 20:33:21.581033"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "6405.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "2"], ["created_at", "2019-06-02 20:33:21.582766"], ["updated_at", "2019-06-02 20:33:21.582766"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "5832.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "3"], ["created_at", "2019-06-02 20:33:21.584705"], ["updated_at", "2019-06-02 20:33:21.584705"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "6862.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "4"], ["created_at", "2019-06-02 20:33:21.586222"], ["updated_at", "2019-06-02 20:33:21.586222"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "3327.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "5"], ["created_at", "2019-06-02 20:33:21.587728"], ["updated_at", "2019-06-02 20:33:21.587728"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "9715.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "6"], ["created_at", "2019-06-02 20:33:21.589289"], ["updated_at", "2019-06-02 20:33:21.589289"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "4041.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "7"], ["created_at", "2019-06-02 20:33:21.591003"], ["updated_at", "2019-06-02 20:33:21.591003"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "1212.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "8"], ["created_at", "2019-06-02 20:33:21.592714"], ["updated_at", "2019-06-02 20:33:21.592714"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "1932.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "9"], ["created_at", "2019-06-02 20:33:21.594212"], ["updated_at", "2019-06-02 20:33:21.594212"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started GET "/products/" for ::1 at 2019-06-02 16:33:39 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-02 16:33:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (5040.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (131.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (132.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_test"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (265.8ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_development" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (262.8ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_test" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:35:16.486352"], ["updated_at", "2019-06-02 20:35:16.486352"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:35:16.548256"], ["updated_at", "2019-06-02 20:35:16.548256"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-02 20:35:16.553598"], ["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "7083.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.586640"], ["updated_at", "2019-06-02 20:35:16.586640"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Giant"], ["price", "3907.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.589060"], ["updated_at", "2019-06-02 20:35:16.589060"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "7218.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.590664"], ["updated_at", "2019-06-02 20:35:16.590664"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "4625.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.592310"], ["updated_at", "2019-06-02 20:35:16.592310"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "1083.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.593946"], ["updated_at", "2019-06-02 20:35:16.593946"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "1332.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.595948"], ["updated_at", "2019-06-02 20:35:16.595948"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Trek"], ["price", "3412.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.598308"], ["updated_at", "2019-06-02 20:35:16.598308"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "8971.08"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.601281"], ["updated_at", "2019-06-02 20:35:16.601281"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "6707.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.604591"], ["updated_at", "2019-06-02 20:35:16.604591"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "7358.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["created_at", "2019-06-02 20:35:16.606770"], ["updated_at", "2019-06-02 20:35:16.606770"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started GET "/products/" for ::1 at 2019-06-02 16:35:28 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 3.7ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (129.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (131.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_test"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (267.8ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_development" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (268.0ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_test" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:36:26.243785"], ["updated_at", "2019-06-02 20:36:26.243785"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:36:26.290972"], ["updated_at", "2019-06-02 20:36:26.290972"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-02 20:36:26.293798"], ["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "8981.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "0"], ["created_at", "2019-06-02 20:36:26.323371"], ["updated_at", "2019-06-02 20:36:26.323371"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "6315.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "1"], ["created_at", "2019-06-02 20:36:26.326051"], ["updated_at", "2019-06-02 20:36:26.326051"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "6599.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "2"], ["created_at", "2019-06-02 20:36:26.327853"], ["updated_at", "2019-06-02 20:36:26.327853"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "3651.08"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "3"], ["created_at", "2019-06-02 20:36:26.329692"], ["updated_at", "2019-06-02 20:36:26.329692"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "6121.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "4"], ["created_at", "2019-06-02 20:36:26.331765"], ["updated_at", "2019-06-02 20:36:26.331765"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "8182.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "5"], ["created_at", "2019-06-02 20:36:26.333684"], ["updated_at", "2019-06-02 20:36:26.333684"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "9680.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "6"], ["created_at", "2019-06-02 20:36:26.335443"], ["updated_at", "2019-06-02 20:36:26.335443"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "5490.08"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "7"], ["created_at", "2019-06-02 20:36:26.337085"], ["updated_at", "2019-06-02 20:36:26.337085"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "6722.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "8"], ["created_at", "2019-06-02 20:36:26.338687"], ["updated_at", "2019-06-02 20:36:26.338687"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "4936.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "9"], ["created_at", "2019-06-02 20:36:26.340353"], ["updated_at", "2019-06-02 20:36:26.340353"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+Started GET "/products/" for ::1 at 2019-06-02 16:36:36 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/products/" for ::1 at 2019-06-02 16:36:37 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (130.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_development"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (133.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cycle_haven_api_test"[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (267.0ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_development" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (264.2ms)[0m  [1m[35mCREATE DATABASE "cycle_haven_api_test" ENCODING = 'unicode'[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:37:06.931251"], ["updated_at", "2019-06-02 20:37:06.931251"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(8,2), "description" character varying, "department" character varying, "img" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "fr_uid" character varying, "admin" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190602194341)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190602192915),
+(20190602193522);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-02 20:37:06.977389"], ["updated_at", "2019-06-02 20:37:06.977389"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-06-02 20:37:06.980963"], ["key", "environment"]]
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "3516.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://cdn.shopify.com/s/files/1/1353/4159/products/roll-gr-1-side.jpg?v=1557998466"], ["created_at", "2019-06-02 20:37:07.008607"], ["updated_at", "2019-06-02 20:37:07.008607"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "1041.02"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://images-na.ssl-images-amazon.com/images/I/816Vf6Q1ssL._SX425_.jpg"], ["created_at", "2019-06-02 20:37:07.011530"], ["updated_at", "2019-06-02 20:37:07.011530"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "9437.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://cdn.shopify.com/s/files/1/0021/5701/9254/products/BBHAA24_AR3-MATTE-CARBON-CYN-MGNTA_400x400.jpg?v=1533155472"], ["created_at", "2019-06-02 20:37:07.013787"], ["updated_at", "2019-06-02 20:37:07.013787"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "9306.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://images-na.ssl-images-amazon.com/images/I/81nsr0LPsYL._SL1500_.jpg"], ["created_at", "2019-06-02 20:37:07.015422"], ["updated_at", "2019-06-02 20:37:07.015422"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "4937.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://upload.wikimedia.org/wikipedia/commons/6/66/Look_795_30th_Anniversary_Dura-Ace_9100-Mavic_Custom_Build_%2830636542393%29.jpg"], ["created_at", "2019-06-02 20:37:07.017128"], ["updated_at", "2019-06-02 20:37:07.017128"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "3893.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://vader-prod.s3.amazonaws.com/1552584499-specialized-s-works-venge-1533568818.jpg"], ["created_at", "2019-06-02 20:37:07.018795"], ["updated_at", "2019-06-02 20:37:07.018795"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "4948.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://cdn.gearpatrol.com/wp-content/uploads/2017/07/Staff-Picks-Road-Bikes-Gear-Patrol-Scott-1-1940x1300.jpg"], ["created_at", "2019-06-02 20:37:07.020415"], ["updated_at", "2019-06-02 20:37:07.020415"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "8193.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://www.mensjournal.com/wp-content/uploads/bianchioltrexr4-f2ce4392-fc77-4b80-9b29-8f2f71e3f420.jpg"], ["created_at", "2019-06-02 20:37:07.021848"], ["updated_at", "2019-06-02 20:37:07.021848"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "9768.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://images-na.ssl-images-amazon.com/images/I/71aiJm7MxhL._SX425_.jpg"], ["created_at", "2019-06-02 20:37:07.023333"], ["updated_at", "2019-06-02 20:37:07.023333"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "4093.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Road bicycles"], ["img", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Bicicletta_Bianchi_1950-1952_-_Museo_scienza_e_tecnologia_Milano_%28cropped%29.jpg/300px-Bicicletta_Bianchi_1950-1952_-_Museo_scienza_e_tecnologia_Milano_%28cropped%29.jpg"], ["created_at", "2019-06-02 20:37:07.025008"], ["updated_at", "2019-06-02 20:37:07.025008"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started GET "/products/" for ::1 at 2019-06-02 16:37:12 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 3.7ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLedgers (20190602204229)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ledgers" ("id" bigserial primary key, "product_id" bigint, "cart_id" bigint, "times_bought" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c9c0030d16"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_c7c51a5886"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+)[0m
+  ↳ db/migrate/20190602204229_create_ledgers.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_ledgers_on_product_id" ON "ledgers"  ("product_id")[0m
+  ↳ db/migrate/20190602204229_create_ledgers.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_ledgers_on_cart_id" ON "ledgers"  ("cart_id")[0m
+  ↳ db/migrate/20190602204229_create_ledgers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190602204229"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4189400864926512060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "9050.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://images-na.ssl-images-amazon.com/images/I/91hYP0XkalL._SL1500_.jpg"], ["created_at", "2019-06-02 21:08:46.891673"], ["updated_at", "2019-06-02 21:08:46.891673"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "1955.05"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "http://ghanabamboobikes.org/wp-content/uploads/2018/06/FULL-SUSPENSION-MOUNTAIN-BIKE.jpg"], ["created_at", "2019-06-02 21:08:46.894309"], ["updated_at", "2019-06-02 21:08:46.894309"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "7003.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://tredz.azureedge.net/prodimg/200590-602876_1_Zoom.jpg"], ["created_at", "2019-06-02 21:08:46.896279"], ["updated_at", "2019-06-02 21:08:46.896279"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "6765.08"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://www.bicyclesonline.com.au/assets/thumb/62466.jpg"], ["created_at", "2019-06-02 21:08:46.897971"], ["updated_at", "2019-06-02 21:08:46.897971"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "9391.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://images-na.ssl-images-amazon.com/images/I/81ajuUvOOdL._SX425_.jpg"], ["created_at", "2019-06-02 21:08:46.900312"], ["updated_at", "2019-06-02 21:08:46.900312"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "6303.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/11/2014/07/spesh2.jpg"], ["created_at", "2019-06-02 21:08:46.902222"], ["updated_at", "2019-06-02 21:08:46.902222"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cervelo"], ["price", "9800.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://tredz.azureedge.net/prodimg/200161-601883_1_Zoom.jpg"], ["created_at", "2019-06-02 21:08:46.904471"], ["updated_at", "2019-06-02 21:08:46.904471"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "4660.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://austinbikefarm.com/wp-content/uploads/2018/10/Intense-Spider-A-27.5-Medium-2.jpg"], ["created_at", "2019-06-02 21:08:46.906537"], ["updated_at", "2019-06-02 21:08:46.906537"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "1479.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://images.amain.com/images/large/bikes/fuji/yb-rk11-15.jpg?width=950"], ["created_at", "2019-06-02 21:08:46.908423"], ["updated_at", "2019-06-02 21:08:46.908423"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "5110.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Mountain bicycles"], ["img", "https://www.rei.com/media/product/146075"], ["created_at", "2019-06-02 21:08:46.910182"], ["updated_at", "2019-06-02 21:08:46.910182"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "1526.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Light_Touring_Bicycle.JPG/220px-Light_Touring_Bicycle.JPG"], ["created_at", "2019-06-02 21:08:46.911805"], ["updated_at", "2019-06-02 21:08:46.911805"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "6651.03"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://www.cyclingabout.com/wp-content/uploads/2018/08/2019-Trek-520-Touring-Bike-01.jpeg"], ["created_at", "2019-06-02 21:08:46.913520"], ["updated_at", "2019-06-02 21:08:46.913520"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "6268.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://vader-prod.s3.amazonaws.com/1551216200-specialized-awol-expert-1551216181.jpg"], ["created_at", "2019-06-02 21:08:46.915457"], ["updated_at", "2019-06-02 21:08:46.915457"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "1354.07"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://static1.squarespace.com/static/5b4544e485ede17941bc95fc/t/5c0075500ebbe849ad9fa500/1543862285580/Trek520.jpg?format=750w"], ["created_at", "2019-06-02 21:08:46.917487"], ["updated_at", "2019-06-02 21:08:46.917487"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Trek"], ["price", "9319.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://testimonialcollecter.com/btp-photos/uploads/2014/10/patria-terra-touring-bicycle.jpg"], ["created_at", "2019-06-02 21:08:46.919928"], ["updated_at", "2019-06-02 21:08:46.919928"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Surly"], ["price", "8885.09"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://i.ytimg.com/vi/1Kbl9QlGio0/maxresdefault.jpg"], ["created_at", "2019-06-02 21:08:46.921775"], ["updated_at", "2019-06-02 21:08:46.921775"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Giant"], ["price", "6581.01"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://cdn.road.cc/sites/default/files/styles/main_width/public/falkenjagd-hoplit-pinion-titanium-touring-bike-4.jpg?itok=TF5bMZbI"], ["created_at", "2019-06-02 21:08:46.923602"], ["updated_at", "2019-06-02 21:08:46.923602"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bianchi"], ["price", "1503.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://320southwine.com/wp-content/uploads/best-touring-bicycles-primera-disc-gent-stevens-bikes-2017-touring-bike-of-best-touring-bicycles.jpg"], ["created_at", "2019-06-02 21:08:46.925396"], ["updated_at", "2019-06-02 21:08:46.925396"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cannondale"], ["price", "4977.04"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "http://www.llewellynbikes.com/images/images2011/BicycleFramePagePhotos/Touring_Frame.jpg"], ["created_at", "2019-06-02 21:08:46.927212"], ["updated_at", "2019-06-02 21:08:46.927212"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "department", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Cube Bikes"], ["price", "5963.06"], ["description", "ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PERIOD.  EVEN THE BIGGEST BRANDS IN THE INDUSTRY CUT CORNERS, USING NON-SHIMANO COMPONENTS ON THEIR ENTRY LEVEL BIKES. WITH THE IMOLA, WE CHOSE TO GO A DIFFERENT ROUTE.  EVERY COMPONENT ON THE IMOLA IS SHIMANO R2000 CLARIS, BRINGING THE WHOLE GROUPSET TOGETHER FOR MAXIMUM PERFORMANCE, GETTING YOU THE MOST OUT OF EVERY PEDAL STROKE."], ["department", "Touring bicycles"], ["img", "https://www.fujibikes.com/usa/img/bikes/high/2018_FUJI_TOURING_DARKBLUE.jpg"], ["created_at", "2019-06-02 21:08:46.929002"], ["updated_at", "2019-06-02 21:08:46.929002"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+Started GET "/products/" for ::1 at 2019-06-02 17:08:54 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/roman/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 4.2ms)
+
+
