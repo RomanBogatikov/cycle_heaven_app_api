@@ -49,15 +49,15 @@ description="ABSOLUTELY THE BEST VALUE FOR AN ENTRY LEVEL BIKE ON THE MARKET, PE
 
 name = ["Bianchi", "Trek", "Cannondale", "Cervelo", "Surly", "Cube Bikes", "Giant"]
 
-# roadbikes.length.times do |i|
-#   Product.create(
-#     name: name[rand(0 .. name.length - 1)],
-#     price: Faker::Number.decimal(4, 2),
-#     description: description,
-#     department: "Road bicycles",
-#     img: roadbikes[i],
-#   )
-# end
+roadbikes.length.times do |i|
+  Product.create(
+    name: name[rand(0 .. name.length - 1)],
+    price: Faker::Number.decimal(4, 2),
+    description: description,
+    department: "Road bicycles",
+    img: roadbikes[i],
+  )
+end
 
 mountainbikes.length.times do |i|
   Product.create(
@@ -78,3 +78,18 @@ touringbikes.length.times do |i|
     img: touringbikes[i],
   )
 end
+
+Sale.create([
+  { average_road: 39000, average_mountain: 26000, average_touring: 29000, month: 'January',},
+  { average_road: 42000, average_mountain: 29000, average_touring: 25000, month: "February",},
+  { average_road: 50000, average_mountain: 35000, average_touring: 27000, month: 'March',},
+  { average_road: 61000, average_mountain: 76000, average_touring: 70000, month: 'April',},
+  { average_road: 71000, average_mountain: 75000, average_touring: 68000, month: 'May',},
+  { average_road: 79000, average_mountain: 64000, average_touring: 70000, month: 'June',},
+  { average_road: 84000, average_mountain: 69000, average_touring: 55000, month: 'July',},
+  { average_road: 83000, average_mountain: 68000, average_touring: 60000, month: 'August',},
+  { average_road: 75000, average_mountain: 61000, average_touring: 70000, month: 'September',},
+  { average_road: 64000, average_mountain: 50000, average_touring: 60000, month: 'October',},
+  { average_road: 54000, average_mountain: 42000, average_touring: 55000, month: 'November',},
+  { average_road: 43000, average_mountain: 48000, average_touring: 40000, month: 'December',},
+])

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  average_road: 1
+  average_mountain: 1
+  average_touring: 1
+  month: MyString
+
+two:
+  average_road: 1
+  average_mountain: 1
+  average_touring: 1
+  month: MyString

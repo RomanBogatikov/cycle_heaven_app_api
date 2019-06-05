@@ -14,11 +14,12 @@ class UsersController < ApplicationController
   end
 
   # POST /users
+  # we hit this route when new user signs up. We get user email, fs_uid, and whether a new user is admin or not from react
   def create
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end

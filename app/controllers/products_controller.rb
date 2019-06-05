@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
+    puts 'in it to win it'
     @products = Product.all
 
     render json: @products
